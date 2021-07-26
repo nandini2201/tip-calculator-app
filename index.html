@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="logo">
+        <img src="/images/logo.svg" alt="" />
+      </div>
+
+      <div class="calculator">
+        <div class="left">
+          <div class="bill">
+            <div class="bill_text">
+              <p>Bill</p>
+              <p id="err_bill">Enter a valid number</p>
+            </div>
+            <input type="number" id="bill" min="1" placeholder="0" />
+            <img src="/images/icon-dollar.svg" alt="" />
+          </div>
+          <div class="sel_tip">
+            <p>Select Tip %</p>
+            <div class="tip">
+              <button
+                type="button"
+                class="perc_btn unselected"
+                data-percentage="5"
+              >
+                5%
+              </button>
+              <button type="button" class="perc_btn" data-percentage="10">
+                10%
+              </button>
+              <button type="button" class="perc_btn" data-percentage="15">
+                15%
+              </button>
+              <button type="button" class="perc_btn" data-percentage="25">
+                25%
+              </button>
+              <button type="button" class="perc_btn" data-percentage="50">
+                50%
+              </button>
+              <input type="number" placeholder="Custom" id="custom" min="1" />
+            </div>
+          </div>
+          <div class="people">
+            <div class="prs_text">
+              <p>Number of People</p>
+              <p class="err-mssg">Can't be zero</p>
+            </div>
+            <input type="number" id="people" value="" min="1" placeholder="0" />
+            <img src="/images/icon-person.svg" alt="" />
+          </div>
+        </div>
+
+        <div class="right">
+          <div class="results">
+            <div class="tip_amount">
+              <div class="tip_amount_text">
+                <p class="main_text">Tip Amount</p>
+                <p class="text_little">/ person</p>
+                <h1 class="tip-amount"></h1>
+              </div>
+              <div class="money">
+                <p id="tip_Amount"></p>
+              </div>
+            </div>
+            <div class="total">
+              <div class="final_text">
+                <p class="main_text">Total</p>
+                <p class="text_little">/ person</p>
+                <h1 class="total-amount"></h1>
+              </div>
+              <div class="money">
+                <p id="total_Amount"></p>
+              </div>
+              <!-- <div class="per-person"></div>  -->
+            </div>
+          </div>
+          <button type="button" id="reset">RESET</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
