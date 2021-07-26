@@ -99,7 +99,7 @@ main {
 .bill input {
   width: 96%;
   height: 2.5rem;
-  border: none;
+  border: 2px solid transparent;
   border-radius: 5px;
   text-align: right;
   padding-right: 3%;
@@ -139,8 +139,8 @@ p#total_Amount {
 .people input {
   width: 96%;
   height: 2.5rem;
-  border: none;
-  border-color: var(--strongcyan);
+  border: 2px solid transparent;
+ 
   background-color: var(--lightcyan);
   border-radius: 5px;
   text-align: right;
